@@ -25,7 +25,6 @@ class Pets {
   func sleep() {
     print("\(name) went to sleep.")
   }
-
 }
 
 class Tamagotchi: Pets {
@@ -57,9 +56,9 @@ class Tamagotchi: Pets {
     else {
       super.feed()
       properties["hunger"] = 0
-      properties["dirt"] += 20
-      properties["boredom"] += 20
-      properties["drowsiness"] += 10
+      properties["dirt"]! += 20
+      properties["boredom"]! += 20
+      properties["drowsiness"]! += 10
     }
   }
 
@@ -69,10 +68,10 @@ class Tamagotchi: Pets {
     }
     else {
       super.clean()
-      properties["hunger"] += 20
-      properties["dirt"] += 0
-      properties["boredom"] = 20
-      properties["drowsiness"] += 10
+      properties["hunger"]! += 20
+      properties["dirt"] = 0
+      properties["boredom"]! += 20
+      properties["drowsiness"]! += 10
     }
   }
 
@@ -82,10 +81,10 @@ class Tamagotchi: Pets {
     }
     else {
       super.play()
-      properties["hunger"] += 20
-      properties["dirt"] = 20
-      properties["boredom"] += 0
-      properties["drowsiness"] += 10
+      properties["hunger"]! += 20
+      properties["dirt"]! += 20
+      properties["boredom"] = 0
+      properties["drowsiness"]! += 10
     }
   }
 
@@ -95,9 +94,9 @@ class Tamagotchi: Pets {
     }
     else {
       super.sleep()
-      properties["hunger"] += 20
-      properties["dirt"] += 10
-      properties["boredom"] += 20
+      properties["hunger"]! += 20
+      properties["dirt"]! += 10
+      properties["boredom"]! += 20
       properties["drowsiness"] = 0
       ageInDays += 1
     }
