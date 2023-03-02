@@ -25,6 +25,7 @@ class Pets {
   func sleep() {
     print("\(name) went to sleep.")
   }
+
 }
 
 class Tamagotchi: Pets {
@@ -107,19 +108,20 @@ class Tamagotchi: Pets {
         "dirt: \(properties["dirt"]!)", 
         "boredom: \(properties["boredom"]!)", 
         "drowsiness: \(properties["drowsiness"]!)")
-    if properties["hunger"] >= 60 {
+
+    if properties["hunger"]! >= 60 {
       print("\(name) is hungry")
     }
 
-    if properties["dirt"] >= 60 {
+    if properties["dirt"]! >= 60 {
       print("\(name) is dirty")
     }
 
-    if properties["boredom"] >= 60 {
+    if properties["boredom"]! >= 60 {
       print("\(name) is bored")
     }
 
-    if properties["drowsiness"] >= 60 {
+    if properties["drowsiness"]! >= 60 {
       print("\(name) is sleepy")
     }  
   }
@@ -131,3 +133,12 @@ class Tamagotchi: Pets {
 
 var game = Tamagotchi()
 game.name = "Tamago"
+
+
+"""
+Retrieving a value as optional integer
+찾는 값이 dictionary에 없을 수도(nil) 있으므로, dictionary[key]의 값은 항상 optional.
+특정 값과의 단순 비교(==, 결과가 true or false 경우 밖에 없음))나 값을 할당하는 것(=)은 unwrap할 필요가 없으나, 
+>, <와 같은 크기 비교나, 연산을 통해 값을 바꾸고자 하는 경우에는
+optional binding을 통해 값을 unwrap하여 nil을 꺼내 app이 crash되는 불상사가 없도록 할 것... 
+"""
