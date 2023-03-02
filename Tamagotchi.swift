@@ -131,9 +131,7 @@ class Tamagotchi: Pets {
   }
 }
 
-var game = Tamagotchi()
-game.name = "Tamago"
-
+var game = Tamagotchi("tamago")
 
 """
 Retrieving a value as optional integer
